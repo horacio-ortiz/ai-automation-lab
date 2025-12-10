@@ -5,7 +5,7 @@ import { useRef } from "react";
 const timeline = [
   { year: "2015", event: "Inicio en desarrollo de software" },
   { year: "2018", event: "Especialización en IA y Machine Learning" },
-  { year: "2020", event: "Fundación de Intelia" },
+  { year: "2020", event: "Fundación de HOFlow" },
   { year: "2023", event: "Líder en automatización empresarial" },
 ];
 
@@ -69,7 +69,7 @@ export const AboutSection = () => {
                 multidisciplinario que combina tecnología, estrategia y visión empresarial.
               </p>
               <p>
-                Como socio de <strong className="text-foreground">Intelia</strong>, una agencia 
+                Como socio de <strong className="text-foreground">HOFlow</strong>, una agencia 
                 de automatización inteligente en Santiago de Chile, lidero proyectos que 
                 transforman la manera en que las empresas operan.
               </p>

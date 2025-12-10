@@ -19,7 +19,7 @@ export const Footer = () => {
             animate={{ opacity: 1 }}
             className="text-2xl font-bold font-space gradient-text"
           >
-            Aishia
+            HOFlow
           </motion.div>
 
           {/* Social Links */}
@@ -47,7 +47,7 @@ export const Footer = () => {
               Aviso de privacidad
             </a>
             <span>|</span>
-            <span>© 2025 Intelia</span>
+            <span>© 2025 HOFlow</span>
           </div>
         </div>
       </div>

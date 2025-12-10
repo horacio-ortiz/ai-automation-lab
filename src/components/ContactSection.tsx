@@ -136,7 +136,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold font-space mb-1">Email</h3>
-                  <p className="text-muted-foreground">contacto@aishia.cl</p>
+                  <p className="text-muted-foreground">contacto@HOFlow.cl</p>
                 </div>
               </div>
             </div>
