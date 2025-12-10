@@ -60,6 +60,47 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## How to run with Docker
+
+This project includes Docker configuration for easy deployment. Make sure you have Docker and Docker Compose installed.
+
+### Build and run the application:
+
+```sh
+# Build and start the application
+docker compose up --build
+
+# Or build first, then run
+docker compose build
+docker compose up
+```
+
+The application will be available at `http://localhost:8080`.
+
+### Stop the application:
+
+```sh
+docker compose down
+```
+
+### Update the application:
+
+```sh
+# Pull latest changes and rebuild
+git pull
+docker compose up --build --force-recreate
+```
+
+### Alternative commands (without docker-compose):
+
+```sh
+# Build the image
+docker build -t ai-automation-lab .
+
+# Run the container
+docker run --rm -p 8080:80 ai-automation-lab
+```
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
