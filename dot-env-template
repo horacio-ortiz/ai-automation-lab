@@ -1,0 +1,6 @@
+# Environment Variables
+# Fill in your actual values
+
+# N8N Chat Webhook URL
+# Replace with your production webhook URL from n8n
+VITE_N8N_WEBHOOK_URL=https://n8n.workflowdemo.click/webhook/c5b7e21b-75aa-46d5-9ca0-1d7fb1106329/chat

@@ -59,6 +59,32 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- N8N Chat Integration
+
+## N8N Chat Configuration
+
+This project includes an integrated N8N chat widget for conversational AI automation.
+
+### Setup
+
+1. Copy the environment example file:
+   ```sh
+   cp env-example.txt .env
+   ```
+
+2. In your `.env` file, replace the webhook URL with your actual N8N production webhook:
+   ```
+   VITE_N8N_WEBHOOK_URL=https://your-n8n-instance.com/webhook/your-chat-webhook-id
+   ```
+
+3. The chat widget will automatically load and appear on all pages of your application.
+
+### Customization
+
+The chat widget is implemented in `src/components/ChatWidget.tsx`. You can customize:
+- Webhook URL via environment variable
+- Styling through the imported CSS from n8n
+- Positioning and behavior by modifying the component
 
 ## How can I deploy this project?
 
