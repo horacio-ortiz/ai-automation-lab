@@ -8,7 +8,9 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --host 0.0.0.0 --port 8080",
+    "start": "vite preview --host 0.0.0.0 --port 8080",
+    "package": "npm run build && cd dist && zip -r ../dist.zip . -x \"*.DS_Store\" -x \"__MACOSX*\" -x \"*/.DS_Store\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
