@@ -59,6 +59,17 @@ const ChatWidget = ({ webhookUrl }: ChatWidgetProps) => {
            TEMA ESTILO CHATFLOW – OSCURO MODERNO SOLO PARA EL WIDGET
            ======================================================= */
 
+        /* Asegurar que formularios fuera del chat sigan interactivos */
+        #contacto input,
+        #contacto textarea,
+        form:not([class*="n8n-chat"]) input,
+        form:not([class*="n8n-chat"]) textarea {
+          pointer-events: auto !important;
+          position: relative !important;
+          z-index: auto !important;
+          opacity: 1 !important;
+        }
+
         /* Contenedor principal del widget (card) */
         [class*="n8n-chat"][style*="display"],
         [id*="n8n-chat"][style*="display"],

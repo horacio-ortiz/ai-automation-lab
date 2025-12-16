@@ -66,7 +66,7 @@ export const ContactSection = () => {
 
     try {
       // Webhook URL placeholder - replace with actual webhook
-      const webhookUrl = "YOUR_WEBHOOK_URL_HERE";
+      const webhookUrl = "https://n8n.workflowdemo.click/webhook-test/27edfa94-0d01-4db3-9a70-c90eb479f398";
       
       const response = await fetch(webhookUrl, {
         method: "POST",
