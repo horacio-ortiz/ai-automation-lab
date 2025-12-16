@@ -6,6 +6,7 @@ import { toast } from "sonner";
 
 export const ContactSection = () => {
   const ref = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -97,6 +98,14 @@ export const ContactSection = () => {
     }
   };
 
+  const handleResetForm = () => {
+    setIsSuccess(false);
+    // Pequeño delay para asegurar que el estado se actualice antes del scroll
+    setTimeout(() => {
+      formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  };
+
   return (
     <section id="contacto" className="py-24 relative" ref={ref}>
       {/* Background decoration */}
@@ -173,12 +182,13 @@ export const ContactSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <form onSubmit={handleSubmit} className="gradient-border p-8 space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="gradient-border p-8 space-y-6">
               {isSuccess ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-12"
+                  className="text-center py-12 relative z-10"
+                  style={{ pointerEvents: 'auto' }}
                 >
                   <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold font-space mb-2">
@@ -189,8 +199,9 @@ export const ContactSection = () => {
                   </p>
                   <button
                     type="button"
-                    onClick={() => setIsSuccess(false)}
-                    className="text-primary hover:underline"
+                    onClick={handleResetForm}
+                    className="text-primary hover:underline cursor-pointer relative z-10"
+                    style={{ pointerEvents: 'auto' }}
                   >
                     Enviar otro mensaje
                   </button>
