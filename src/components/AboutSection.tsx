@@ -1,14 +1,22 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-
+{/*
 const timeline = [
   { year: "2015", event: "Inicio en desarrollo de software" },
   { year: "2018", event: "Especialización en IA y Machine Learning" },
   { year: "2020", event: "Fundación de HOFlow" },
   { year: "2023", event: "Líder en automatización empresarial" },
 ];
-
+*/}
+const timeline = [
+  { year: "2001", event: "Inicio en tecnología y sistemas críticos de retail" },
+  { year: "2009", event: "Liderazgo de proyectos regionales de Punto de Venta" },
+  { year: "2014", event: "Dirección y gestión de soluciones empresariales" },
+  { year: "2018", event: "Diseño e implementación de flujos de trabajo complejos" },
+  { year: "2023", event: "Especialización en IA y Machine Learning" },
+  { year: "2025", event: "Fundación de HOFlow: automatización e IA aplicada a negocio" },
+];
 export const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -32,18 +40,17 @@ export const AboutSection = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl rotate-3" />
               <div className="absolute -inset-4 bg-gradient-to-br from-secondary/30 to-primary/30 rounded-2xl -rotate-3" />
               
-              {/* Image placeholder with gradient */}
+              {/* Image with photo */}
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
+                {/* Fondo sutil detrás de la foto */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-secondary/40" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-5xl font-bold text-primary-foreground font-space">HO</span>
-                    </div>
-                    <p className="text-foreground font-medium">Horacio Ortiz</p>
-                    <p className="text-muted-foreground text-sm">Consultor IA & Automatización</p>
-                  </div>
-                </div>
+
+                <img
+                  src="/horacio-ortiz.jpg"
+                  alt="Horacio Ortiz"
+                  className="relative z-10 w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </motion.div>
@@ -109,7 +116,7 @@ export const AboutSection = () => {
               className="mt-10 p-6 gradient-border"
             >
               <p className="text-lg italic text-foreground">
-                "Mi misión es llevar la inteligencia artificial a cada rincón empresarial"
+                "Impulsar a empresas y emprendedores a lograr resultados reales mediante soluciones de automatización e inteligencia artificial prácticas, medibles y escalables, transformando procesos complejos en ventajas competitivas claras"
               </p>
               <footer className="mt-2 text-muted-foreground text-sm">
                 — Horacio Ortiz

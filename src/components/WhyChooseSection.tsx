@@ -137,8 +137,7 @@ export const WhyChooseSection = () => {
             );
           })}
         </div>
-
-        {/* Testimonial */}
+        {/* Testimonial 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -166,8 +165,8 @@ export const WhyChooseSection = () => {
             </div>
           </div>
         </motion.div>
-
-        {/* Stats */}
+          */}
+        {/* Stats 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -179,6 +178,7 @@ export const WhyChooseSection = () => {
           <Counter target={500} label="Horas ahorradas/mes" />
           <Counter target={98} label="% de satisfacción" />
         </motion.div>
+        */}
       </div>
     </section>
   );
